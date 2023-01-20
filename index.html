@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador Texto</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <header>
+            <img src="Resourses/Logo.png" alt="Logo de la página." class="logo">
+        </header>
+        <main>
+            <input type="text" id="id1" class="input" placeholder="Ingrese el texto aqui...">
+            <button onclick="encriptar()" class="encriptar">Encriptar!</button>
+            <button onclick="desencriptar()" class="desencriptar">Desencriptar!</button>
+
+            <p id="caja"><img src="Resourses/browser.png" alt="Texto no encontrado." class="encriptado"></p>
+
+            <button onclick="copiar()" class="copiar">Copiar!</button>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
+
+<script>
+    var id1 = "";
+    var id2 = "";
+    var id3 = "";
+    var id4 = "";
+    var id5 = "";
+    var id6 = "";
+
+    function encriptar() {
+        id1 = document.getElementById("id1").value
+        id2 = id1.replaceAll("e","enter");
+        id3 = id2.replaceAll("i","imes");
+        id4 = id3.replaceAll("a","ai");
+        id5 = id4.replaceAll("o","ober");
+        id6 = id5.replaceAll("u","ufat");
+        document.getElementById("caja").innerHTML=id6;
+    }
+
+    function desencriptar() {
+        id1=document.getElementById("id1").value
+        id2 = id1.replaceAll("enter","e");
+        id3 = id2.replaceAll("imes","i");
+        id4 = id3.replaceAll("ai","a");
+        id5 = id4.replaceAll("ober","o");
+        id6 = id5.replaceAll("ufat","u");
+        document.getElementById("caja").innerHTML=id6;
+    }
+
+    function copiar() {
+        var textoCopiado = id6;
+        navigator.clipboard.writeText(textoCopiado);
+    }
+
+</script>
