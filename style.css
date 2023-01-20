@@ -105,3 +105,16 @@ body{
     background-color: #1d83d4;
     transform: scale(1.1);
 }
+
+footer{
+    position: relative;
+    top: 550px;
+    width: 940px;
+    margin: 0   auto;
+}
+
+.copyright{
+    padding: 40px 0px;
+    color: #ffffff;
+    text-align: center;
+}
