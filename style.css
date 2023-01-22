@@ -24,6 +24,13 @@ body{
     border-width: 3px;
 }
 
+.alerta{
+    color: #ffffff;
+    position: absolute;
+    left: 150px;
+    top: 550px;
+}
+
 .encriptar{
     position: absolute;
     top: 600px;
@@ -118,3 +125,94 @@ footer{
     color: #ffffff;
     text-align: center;
 }
+
+/*Aqui comienza el código correspondiente a la visualización en dispositivos móviles*/
+
+/*@media screen and (max-width: 480px){
+.logo{
+    width: 35%;
+}
+
+#id1{
+    top: 220px;
+}
+
+.encriptar{
+    width: 740px;
+    top: 500px;
+    left: 100px;
+}
+
+.desencriptar{
+    width: 740px;
+    left: 100px;
+}
+
+#caja{
+    width: 700px;
+    left: 100px;
+    top: 700px;
+}
+
+.encriptado{
+    width: 50%;
+}
+
+.copiar{
+    width: 740px;
+    left: 100px;
+    top: 1400px;
+}
+
+footer{
+    top: 1400px;
+}
+
+}*/
+
+@media screen and (max-width: 900px){
+
+    .logo{
+        width: 15%;
+    }
+
+    #id1{
+        top: 250px;
+    }
+
+    .alerta{
+        width: 1000px;
+        left: 100px;
+    }
+
+    .encriptar{
+        width: 350px;
+        left: 100px;
+    }
+
+    .desencriptar{
+        width: 350px;
+        right: 100px;
+    }
+
+    #caja{
+        width: 700px;
+        left: 100px;
+        top: 700px;
+    }
+
+    .encriptado{
+        width: 45%;
+    }
+
+    .copiar{
+        width: 500px;
+        top: 1250px;
+        left: 225px;
+    }
+
+    footer{
+        top: 1250px;
+    }
+
+    }
