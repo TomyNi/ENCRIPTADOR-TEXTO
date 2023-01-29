@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
     
     <body>
@@ -66,6 +67,7 @@
     function copiar() {
         var textoCopiado = id6;
         navigator.clipboard.writeText(textoCopiado);
+        swal("Texto copiado!", "El texto ha sido copiado al portapapeles.", "success");
     }
 
     var id1 = "";
