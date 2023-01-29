@@ -7,6 +7,11 @@ body{
     width: 6%;
     text-align: left;
     margin: 25px 50px;
+        transition: 500ms all;
+}
+
+.logo:hover{
+    transform: scale(1.1);
 }
 
 #id1{
@@ -76,7 +81,7 @@ body{
 #caja{
     width: 450px;
     height: 600px;
-    background: #dadada;;
+    background: #ffffff;;
     border-width: 5px;
     border-radius: 25px;
     position: absolute;
@@ -111,6 +116,25 @@ body{
 .copiar:hover{
     background-color: #1d83d4;
     transform: scale(1.1);
+}
+
+.swal-modal {
+    background-color: #ffffff;
+}
+
+.swal-button {
+    border-radius: 10px;
+    background-color: #2196f3;
+    border: none;
+    text-shadow: none;
+    font-weight: bold;
+    transition: 500ms all;
+}
+
+.swal-button:hover{
+    background-color: #1d83d4;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 footer{
@@ -178,6 +202,7 @@ footer{
 
     #id1{
         top: 250px;
+
     }
 
     .alerta{
