@@ -236,6 +236,10 @@ footer{
         left: 225px;
     }
 
+    .swal-modal{
+        width: 60%;
+    }
+
     footer{
         top: 1250px;
     }
