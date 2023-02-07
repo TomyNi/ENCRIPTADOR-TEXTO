@@ -19,7 +19,7 @@
         <main>
             <!-Datos a encriptar - Botones encriptar y desencriptar>
             <div>
-                <input type="text" id="id1" class="input" placeholder="Ingrese el texto aqui...">
+                <input type="text" id="id1" class="input" placeholder="Ingrese el texto aqui..." onkeypress="return ((event.charCode >= 97 && event.charCode <= 122)|| event.charCode == 32)">
                 <button onclick="encriptar()" class="encriptar">Encriptar!</button>
                 <button onclick="desencriptar()" class="desencriptar">Desencriptar!</button>
             </div>
