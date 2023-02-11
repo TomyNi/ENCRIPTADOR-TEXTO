@@ -19,7 +19,7 @@
         <main>
             <!-Datos a encriptar - Botones encriptar y desencriptar>
             <div>
-                <input type="text" id="id1" class="input" placeholder="Ingrese el texto aqui..." onkeypress="return ((event.charCode >= 97 && event.charCode <= 122)|| event.charCode == 32)">
+                <input type="text" id="id1" class="input" placeholder="Ingrese el texto aqui...">
                 <button onclick="encriptar()" class="encriptar">Encriptar!</button>
                 <button onclick="desencriptar()" class="desencriptar">Desencriptar!</button>
             </div>
@@ -44,24 +44,44 @@
 
 <script>
 
-    function encriptar() {
+    function validar() {
         id1 = document.getElementById("id1").value
-        id2 = id1.replaceAll("e","enter");
-        id3 = id2.replaceAll("i","imes");
-        id4 = id3.replaceAll("a","ai");
-        id5 = id4.replaceAll("o","ober");
-        id6 = id5.replaceAll("u","ufat");
-        document.getElementById("caja").innerHTML=id6;
+        var validador = id1.match(/^[a-z]*$/);
+        
+        if(!validador || validador === 0) {
+            swal({
+                icon: "error",
+                title: "ERROR!",
+                text: "Solo se admiten letras minusculas y sin acentos",
+                button: false,
+            });
+            setTimeout('document.location.reload()',3500);
+            return true
+        }
+    }
+
+    function encriptar() {
+        if(!validar()) {
+            id1 = document.getElementById("id1").value
+            id2 = id1.replaceAll("e","enter");
+            id3 = id2.replaceAll("i","imes");
+            id4 = id3.replaceAll("a","ai");
+            id5 = id4.replaceAll("o","ober");
+            id6 = id5.replaceAll("u","ufat");
+            document.getElementById("caja").innerHTML=id6;
+        }
     }
 
     function desencriptar() {
-        id1=document.getElementById("id1").value
-        id2 = id1.replaceAll("enter","e");
-        id3 = id2.replaceAll("imes","i");
-        id4 = id3.replaceAll("ai","a");
-        id5 = id4.replaceAll("ober","o");
-        id6 = id5.replaceAll("ufat","u");
-        document.getElementById("caja").innerHTML=id6;
+        if(!validar()) {
+            id1=document.getElementById("id1").value
+            id2 = id1.replaceAll("enter","e");
+            id3 = id2.replaceAll("imes","i");
+            id4 = id3.replaceAll("ai","a");
+            id5 = id4.replaceAll("ober","o");
+            id6 = id5.replaceAll("ufat","u");
+            document.getElementById("caja").innerHTML=id6;
+        }
     }
 
     function copiar() {
